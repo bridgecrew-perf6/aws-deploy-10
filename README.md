@@ -45,7 +45,7 @@ jobs:
         run: |
           docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:$IMAGE_TAG
 
-      - uses: globalhealthmonitor/aws-deploy@v1.0
+      - uses: globalhealthmonitor/aws-deploy@v1.1
         with:
           bucket-name: ${{ secrets.BUCKET_NAME_DEPLOY }}
           helm-name: ${{ secrets.PROJECT_BUCKET_NAME }}
